@@ -1,9 +1,5 @@
 # Stego-AI: Comprehensive Deep Learning-Based Steganography
 
-[![License](https://img.shields.io/github/license/azhar/stego-ai.svg)](https://github.com/azhrdev/stego-ai/blob/main/LICENSE)
-[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
-[![PyPI Shield](https://img.shields.io/pypi/v/stegoai.svg)](https://pypi.python.org/pypi/stegoai)
-
 ## Overview
 
 **Stego-AI** is a comprehensive steganography toolkit that uses deep learning to hide messages in multiple media types. Unlike traditional steganography techniques, Stego-AI leverages neural networks to embed information in ways that are:
