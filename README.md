@@ -1,6 +1,6 @@
 # Stego-AI: Comprehensive Deep Learning-Based Steganography
 
-[![License](https://img.shields.io/github/license/azhar/stego-ai.svg)](https://github.com/azhar/stego-ai/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/azhar/stego-ai.svg)](https://github.com/azhrdev/stego-ai/blob/main/LICENSE)
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![PyPI Shield](https://img.shields.io/pypi/v/stegoai.svg)](https://pypi.python.org/pypi/stegoai)
 
