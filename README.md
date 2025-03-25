@@ -1,4 +1,4 @@
-# Stego-AI: Comprehensive Deep Learning-Based Steganography
+# Stego-AI: Deep Learning-Based Steganography
 
 ## Overview
 
