@@ -46,28 +46,12 @@ Stego-AI supports five different media types for steganography:
 
 ## Installation
 
-### From PyPI
-
-```bash
-pip install stegoai
-```
-
 ### From Source
 
 ```bash
 git clone https://github.com/azhar/stego-ai.git
 cd stego-ai
 pip install -e .
-```
-
-### With Extra Features
-
-```bash
-# Install with support for all media types
-pip install stegoai[all]
-
-# Or just specific media types
-pip install stegoai[image,audio]
 ```
 
 ## Quick Start
