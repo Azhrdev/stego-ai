@@ -49,7 +49,7 @@ Stego-AI supports five different media types for steganography:
 ### From Source
 
 ```bash
-git clone https://github.com/azhar/stego-ai.git
+git clone https://github.com/azhrdev/stego-ai.git
 cd stego-ai
 pip install -e .
 ```
@@ -219,7 +219,7 @@ If you use Stego-AI in your research, please cite:
   author = {Azhar},
   title = {Stego-AI: Comprehensive Deep Learning Based Steganography},
   year = {2024},
-  url = {https://github.com/azhar/stego-ai}
+  url = {https://github.com/azhrdev/stego-ai}
 }
 ```
 
