@@ -107,10 +107,6 @@ Run tests:
 pytest
 ```
 
-## Documentation
-
-For detailed documentation and examples, see the [official documentation](https://stego-ai.readthedocs.io/).
-
 ## Models and Methods
 
 ### Image Models
