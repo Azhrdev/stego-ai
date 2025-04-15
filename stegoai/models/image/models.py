@@ -25,7 +25,7 @@ from stegoai.models.image.decoders import SimpleDecoder, DenseDecoder, UNetDecod
 from stegoai.models.image.critics import Critic, AdvancedCritic
 from stegoai.utils.image_utils import normalize_image, denormalize_image, read_image, save_image
 from stegoai.utils.text_utils import text_to_bits, bits_to_bytearray, bytearray_to_text
-from stegoai.metrics.image_metrics import ssim, psnr
+from stegoai.utils.image_utils import ssim, psnr
 from stegoai.utils.error_correction import encode_robust_message, decode_robust_message
 
 # Set up logging
@@ -590,7 +590,7 @@ class ImageStegoNet(BaseStegoNet):
             stego_img = self.encoder(img_tensor, payload)[0].clamp(-1.0, 1.0)
         
         # Convert back to numpy and save
-        stego_img = denormalize_image(stego_img.cpu())
+        stego_img = denormalize_image(stego_img.cpu().numpy())
         
         # Use our utility function to save with appropriate format
         save_image(stego_img, output_path, quality=quality)

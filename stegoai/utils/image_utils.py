@@ -58,8 +58,24 @@ def save_image(img_array, file_path, quality=95):
         # Create directory if it doesn't exist
         os.makedirs(os.path.dirname(os.path.abspath(file_path)), exist_ok=True)
         
+        # Check and fix array shape
+        if img_array.ndim > 3:
+            img_array = img_array.squeeze(0)  # Remove batch dimension if present
+            
+        # Ensure we have a proper image shape
+        if img_array.ndim == 2:
+            # Convert grayscale to RGB
+            img_array = np.stack([img_array, img_array, img_array], axis=2)
+        elif img_array.shape[2] == 1:
+            # Convert single channel to RGB
+            img_array = np.concatenate([img_array] * 3, axis=2)
+        
+        # Ensure array has dtype uint8
+        if img_array.dtype != np.uint8:
+            img_array = img_array.astype(np.uint8)
+        
         # Convert to PIL image
-        img = Image.fromarray(img_array.astype(np.uint8))
+        img = Image.fromarray(img_array)
         
         # Determine format from extension
         ext = os.path.splitext(file_path)[1].lower()

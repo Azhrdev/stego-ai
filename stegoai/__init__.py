@@ -8,7 +8,7 @@ types including images, audio, text, video, and network protocols.
 
 __author__ = """Azhar"""
 __email__ = 'skazharuddin2003@gmail.com'
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 # Image steganography
 from stegoai.models.image.models import ImageStegoNet
@@ -41,8 +41,18 @@ def get_model(media_type, **kwargs):
         ValueError: If an invalid media type is provided
     """
     if media_type == 'image':
-        return ImageStegoNet(**kwargs)
+        # Handle architecture parameter specially for ImageStegoNet
+        if 'architecture' in kwargs:
+            architecture = kwargs.pop('architecture')
+            return ImageStegoNet.load(architecture=architecture, **kwargs)
+        else:
+            return ImageStegoNet(**kwargs)
     elif media_type == 'audio':
+        # Handle method parameter as architecture for AudioStegoNet
+        if 'method' in kwargs:
+            method = kwargs.pop('method')
+            kwargs['mode'] = method  # Change method to mode parameter
+            return AudioStegoNet.load(architecture=method, **kwargs)
         return AudioStegoNet(**kwargs)
     elif media_type == 'text':
         return TextStegoNet(**kwargs)

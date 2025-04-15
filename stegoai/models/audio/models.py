@@ -27,7 +27,7 @@ from stegoai.utils.audio_utils import (
     calculate_spectrogram, reconstruct_from_spectrogram, apply_phase_reconstruction,
 )
 from stegoai.utils.text_utils import text_to_bits, bits_to_bytearray, bytearray_to_text
-from stegoai.metrics.audio_metrics import calculate_snr, calculate_pesq
+from stegoai.utils.audio_utils import calculate_snr, calculate_pesq
 
 # Set up logging
 logger = logging.getLogger(__name__)
